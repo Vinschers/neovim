@@ -2107,7 +2107,7 @@ char *getnextac(int c, void *cookie, int indent, bool do_concat)
     AutoCmd ac_copy = *ac;
 
     if (oneshot) {
-      ac->pat = NULL; // Assign NULL to prevent calling autocommand with once=true again
+      ac->pat = NULL;  // Assign NULL to prevent calling autocommand with once=true again
     }
 
     // Can potentially reallocate kvec_t data and invalidate the ac pointer
@@ -2116,7 +2116,7 @@ char *getnextac(int c, void *cookie, int indent, bool do_concat)
       oneshot = true;
     }
 
-    kv_A(*acs, apc->auidx).pat = ac_copy.pat; // Restore aucmd reference
+    kv_A(*acs, apc->auidx).pat = ac_copy.pat;  // Restore aucmd reference
 
     // TODO(tjdevries):
     //
