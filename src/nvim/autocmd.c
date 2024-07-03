@@ -2116,7 +2116,7 @@ char *getnextac(int c, void *cookie, int indent, bool do_concat)
       oneshot = true;
     }
 
-    ac->pat = ac_copy.pat; // Restore aucmd reference
+    kv_A(*acs, apc->auidx).pat = ac_copy.pat; // Restore aucmd reference
 
     // TODO(tjdevries):
     //
